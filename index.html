@@ -27,29 +27,32 @@
 </head>
     
 <body>
-    <div class="page-wrapper">
+    <div class="page-wrapper"><!--page-wrapper-->
         
-        <div class="logo">
-            <img src="images/logo.svg" />
-        </div>
+        <div class="splash"><!--splash-->
+            <div class="logo">
+                <img src="images/logo.svg" />
+            </div>
+            <div class="Language">
+                <ul>
+                    <li><a href=""><img src="images/flag_us.svg" class="flag_lang" /> <b class="text_lang">English</b></a></li>
+                    <li><a href=""><img src="images/flag_saudiarabia.svg" class="flag_lang" /> <b class="text_lang">العربية</b></a></li>
+                    <li><a href=""><img src="images/flag_pakistan.svg" class="flag_lang" /><b class="text_lang">اردو</b> </a></li>
+                    <li><a href=""><img src="images/flag_india.svg" class="flag_lang" /> <b class="text_lang">india</b></a></li>
+                </ul>
+            </div>
+            <div class="dialog">
+                <h4 class="title_dialog">Language Confirmation</h4>
+                <p class="content_dialog">Are you sure want <input class="input_lang" type="text" value="English" /></p>
+                <button type="submit" class="btn btn-info approve">Yes</button>
+                <button type="submit" class="btn btn-light nonapprove">Cancel</button>
+            </div>
+            <div class="blackOverview"></div>
+        </div><!--/splash-->
         
-        <div class="Language">
-            <ul>
-                <li><a href=""><img src="images/flag_us.svg" class="flag_lang" /> <b class="text_lang">English</b></a></li>
-                <li><a href=""><img src="images/flag_saudiarabia.svg" class="flag_lang" /> <b class="text_lang">العربية</b></a></li>
-                <li><a href=""><img src="images/flag_pakistan.svg" class="flag_lang" /><b class="text_lang">اردو</b> </a></li>
-                <li><a href=""><img src="images/flag_india.svg" class="flag_lang" /> <b class="text_lang">india</b></a></li>
-            </ul>
-        </div>
         
-        <div class="dialog">
-            <h4 class="title_dialog">Language Confirmation</h4>
-            <p class="content_dialog">Are you sure want <input class="input_lang" type="text" value="English" /></p>
-            <button type="submit" class="btn btn-info approve">Yes</button>
-            <button type="submit" class="btn btn-light nonapprove">Cancel</button>
-        </div>
-        <div class="blackOverview"></div>
-
+        
+        
         
 <!--
         <input type="text" class="InputOfPhone" />
@@ -68,7 +71,7 @@
             <span class="delete">Delete</span>
         </div>
 -->
-    </div>
+    </div><!--/page-wrapper-->
     
     
     
@@ -99,6 +102,9 @@
     $('.approve, .nonapprove').click(function() {
         $('.dialog').hide();
         $('.blackOverview').hide();
+    });
+    $('.approve').click(function() {
+        $('.Language').hide();
     });
 </script>
 
