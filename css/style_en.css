@@ -36,16 +36,32 @@ html {
   min-height: 100%; }
 
 body {
-  font: 100% cairo, Helvetica, sans-serif;
-  color: #6D6E70;
-  background: #F1F2F2;
-  margin: 0;
-  width: 100%;
-  font-size: initial;
-  line-height: normal;
-  direction: ltr;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -ms-overflow-style: scrollbar; }
+    font: 100% cairo, Helvetica, sans-serif;
+    color: #6D6E70;
+    background: #fff;
+    margin: 0;
+    width: 100%;
+    font-size: initial;
+    line-height: normal;
+    direction: ltr;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -ms-overflow-style: scrollbar;
+    height: 100%;
+}
 
 @-ms-viewport { width: device-width; }
+
+
+
+
+
+.page-wrapper {
+    width: 100%;
+    background: #fff;
+    margin-top: 76px;
+    max-width: 720px;
+    margin: 0 auto;
+    height: 100%;
+    border: #000 1px solid;
+}

@@ -27,24 +27,30 @@
     
 </head>
 <body>
-    <p>Mobile App</p>
-    
-    <input type="text" class="InputOfPhone" />
-    
-    <div class="NumPadPhone">
-        <a href="">1</a>
-        <a href="">2</a>
-        <a href="">3</a>
-        <a href="">4</a>
-        <a href="">5</a>
-        <a href="">6</a>
-        <a href="">7</a>
-        <a href="">8</a>
-        <a href="">9</a>
-        <a href="">0</a>
-        <span class="cancel">cancel</span>
-        <span class="delete">Delete</span>
+    <div class="page-wrapper">
+        
+        
+        
+<!--
+        <input type="text" class="InputOfPhone" />
+        <div class="NumPadPhone">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+            <a href="">7</a>
+            <a href="">8</a>
+            <a href="">9</a>
+            <a href="">0</a>
+            <span class="cancel">cancel</span>
+            <span class="delete">Delete</span>
+        </div>
+-->
     </div>
+    
+    
     
     <!-- Javascript -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -56,16 +62,10 @@
         $('.InputOfPhone').val($('.InputOfPhone').val()+$(this).html());
         return false;
     });
-    
     $('.delete').on('click',function () { 
         var textVal = $('.InputOfPhone').val();
         $('.InputOfPhone').val(textVal.substring(0,textVal.length - 1));
     });
-
-    
-    
-
-
 </script>
 
 </body>
