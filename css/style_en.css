@@ -99,5 +99,5 @@ body {
     display: block;
 }
 .flag_lang{
-    max-width: 20px;
+    max-width: 20px !important;
 }
