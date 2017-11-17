@@ -80,3 +80,24 @@ body {
 .logo img{
     max-width: 200px;
 }
+
+
+
+.Language{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+}
+.Language ul li{
+    width: 100%;
+    margin: 8px 0;
+}
+.Language ul li a{
+    display: block;
+}
+.flag_lang{
+    max-width: 20px;
+}
