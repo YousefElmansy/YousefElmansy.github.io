@@ -134,7 +134,7 @@ body {
 
 input.input_lang {
     border: none;
-    width: 60px;
+    max-width: 60px;
     display: inline-block;
     margin-top: -5px;
 }

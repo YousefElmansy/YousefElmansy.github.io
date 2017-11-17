@@ -44,9 +44,9 @@
         
         <div class="dialog">
             <h4 class="title_dialog">Language Confirmation</h4>
-            <p class="content_dialog">Are you sure want <input class="input_lang" type="text" value="English" />? </p>
-            <button type="submit" class="btn btn-info">Yes</button>
-            <button type="submit" class="btn btn-light">Cancel</button>
+            <p class="content_dialog">Are you sure want <input class="input_lang" type="text" value="English" /></p>
+            <button type="submit" class="btn btn-info approve">Yes</button>
+            <button type="submit" class="btn btn-light nonapprove">Cancel</button>
         </div>
         <div class="blackOverview"></div>
         
@@ -89,14 +89,16 @@
             $('.Language').slideToggle();
         }, 2000);
     });
-    $('b.text_lang').click(function() {
-        $('.input_lang').val($(this).html());
+    $('.Language a').click(function() {
+        $('.input_lang').val($(this).children('.text_lang').html() + ' ?');
         $('.dialog').fadeIn();
         $('.blackOverview').fadeIn();
         return false;
     });
-    
-
+    $('.approve, .nonapprove').click(function() {
+        $('.dialog').hide();
+        $('.blackOverview').hide();
+    });
 </script>
 
 </body>
