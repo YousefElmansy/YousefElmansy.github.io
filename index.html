@@ -19,10 +19,9 @@
     <meta name="fb:app_id" content="" />
     <meta name="og:url" content="www.morniksa.com" />
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <style>@import url('https://fonts.googleapis.com/css?family=Cairo:300,400,600,700&subset=arabic');</style>
     <!-- Styles -->
-    
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <style>@import url('https://fonts.googleapis.com/css?family=Cairo:300,400,600,700&subset=arabic');</style>
     <link type="text/css" rel="stylesheet" href="css/style_en.css">
     
 </head>
@@ -36,12 +35,20 @@
         
         <div class="Language">
             <ul>
-                <li><a href=""><img src="images/flag_us.svg" class="flag_lang" /> English</a></li>
-                <li><a href=""><img src="images/flag_saudiarabia.svg" class="flag_lang" /> العربية</a></li>
-                <li><a href=""><img src="images/flag_pakistan.svg" class="flag_lang" /> اردو</a></li>
-                <li><a href=""><img src="images/flag_india.svg" class="flag_lang" /> india</a></li>
+                <li><a href=""><img src="images/flag_us.svg" class="flag_lang" /> <b class="text_lang">English</b></a></li>
+                <li><a href=""><img src="images/flag_saudiarabia.svg" class="flag_lang" /> <b class="text_lang">العربية</b></a></li>
+                <li><a href=""><img src="images/flag_pakistan.svg" class="flag_lang" /><b class="text_lang">اردو</b> </a></li>
+                <li><a href=""><img src="images/flag_india.svg" class="flag_lang" /> <b class="text_lang">india</b></a></li>
             </ul>
         </div>
+        
+        <div class="dialog">
+            <h4 class="title_dialog">Language Confirmation</h4>
+            <p class="content_dialog">Are you sure want <input class="input_lang" type="text" value="English" />? </p>
+            <button type="submit" class="btn btn-info">Yes</button>
+            <button type="submit" class="btn btn-light">Cancel</button>
+        </div>
+        <div class="blackOverview"></div>
         
 <!--
         <input type="text" class="InputOfPhone" />
@@ -64,10 +71,9 @@
     
     
     
-    <!-- Javascript -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!-- Javascript -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>    
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>    
     
 <script type="text/javascript">
     $('.NumPadPhone a').click(function() {
@@ -78,6 +84,19 @@
         var textVal = $('.InputOfPhone').val();
         $('.InputOfPhone').val(textVal.substring(0,textVal.length - 1));
     });
+    jQuery(document).ready(function() {
+        setTimeout(function() {
+            $('.Language').slideToggle();
+        }, 2000);
+    });
+    $('b.text_lang').click(function() {
+        $('.input_lang').val($(this).html());
+        $('.dialog').fadeIn();
+        $('.blackOverview').fadeIn();
+        return false;
+    });
+    
+
 </script>
 
 </body>
