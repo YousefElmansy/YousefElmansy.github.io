@@ -94,10 +94,13 @@ body {
 }
 .Language ul li{
     width: 100%;
-    margin: 8px 0;
+    margin: 10px 0;
 }
 .Language ul li a{
     display: block;
+}
+.Language ul li a b{
+    font-weight: normal;
 }
 .flag_lang{
     width: 20px !important;
