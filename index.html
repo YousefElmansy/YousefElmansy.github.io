@@ -48,7 +48,7 @@
                 <button type="submit" class="btn btn-info approve">Yes</button>
                 <button type="submit" class="btn btn-light nonapprove">Cancel</button>
             </div>
-            <div class="blackOverview"></div>
+            
         </div><!--/splash-->
         
         <div class="Phone_Screen">
@@ -60,22 +60,8 @@
                 <div class="country_input">
                     <p class="label_input">Country</p>
                     <div class="country_flag_num">
-                        <b id="country_flag_num"><img src="images/flag_saudiarabia.svg" class="flag_lang" /> <span>0996</span></b>
-                        <i class="fa fa-caret-down"></i>
-                    </div>
-                    <div class="Country_content">
-                        <button onclick="show('operation1')"><img src="images/flag_saudiarabia.svg" class="flag_lang" /> <span>0996</span></button>
-                        <button onclick="show('operation2')"><img src="images/flag_us.svg" class="flag_lang" /> <span>973</span></button>
-                        <button onclick="show('operation3')"><img src="images/flag_pakistan.svg" class="flag_lang" /> <span>971</span></button>
-                        <div id="operation1" style="display: none;">
-                            <img src="images/flag_saudiarabia.svg" class="flag_lang" /> <span>0996</span>
-                        </div>
-                        <div id="operation2" style="display: none;">
-                            <img src="images/flag_us.svg" class="flag_lang" /> <span>973</span>
-                        </div>
-                        <div id="operation3" style="display: none;">
-                            <img src="images/flag_pakistan.svg" class="flag_lang" /> <span>971</span>
-                        </div>
+                        <b id="country_flag_num"><img src="images/flag_saudiarabia.svg" class="flag_lang" /> <span>996</span></b>
+                        <i class="fa fa-caret-down icon_arrow"></i>
                     </div>
                 </div>
                 <div class="phone_input">
@@ -84,6 +70,71 @@
             </div>
         </div>
         
+        <div class="Country_content">
+            <button class="item_Country_content" onclick="show('operation1')">
+                <img src="images/flag_saudiarabia.svg" class="flag_lang" /> <b>Saudi Arabia</b><span>996</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation2')">
+                <img src="images/flag_bahrain.svg" class="flag_lang" /> <b>Bahrain</b><span>973</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation3')">
+                <img src="images/flag_united-arab-emirates.svg" class="flag_lang" /><b>United Arab Emirates</b><span>971</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation4')">
+                <img src="images/flag_kwait.svg" class="flag_lang" /> <b>Kwait</b><span>965</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation5')">
+                <img src="images/flag_qatar.svg" class="flag_lang" /> <b>Qatar</b><span>974</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation6')">
+                <img src="images/flag_oman.svg" class="flag_lang" /> <b>Oman</b><span>968</span>
+            </button>
+            <p class="Letter_type">A</p>
+            <button class="item_Country_content" onclick="show('operation7')">
+                <img src="images/flag_afghanistan.svg" class="flag_lang" /> <b>Afghanistan</b><span>93</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation8')">
+                <img src="images/flag_albania.svg" class="flag_lang" /> <b>Albania</b><span>355</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation9')">
+                <img src="images/flag_algeria.svg" class="flag_lang" /> <b>Algeria</b><span>213</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation10')">
+                <img src="images/flag_american-samoa.svg" class="flag_lang" /> <b>American Samoa</b><span>1-684</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation11')">
+                <img src="images/flag_andorra.svg" class="flag_lang" /> <b>Andorra</b><span>376</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation12')">
+                <img src="images/flag_angola.svg" class="flag_lang" /> <b>Angola</b><span>244</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation13')">
+                <img src="images/flag_anguilla.svg" class="flag_lang" /> <b>Anguilla</b><span>1-264</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation14')">
+                <img src="images/flag_antigua-and-barbuda.svg" class="flag_lang" /> <b>Antigua and Barbuda</b><span>1-268</span>
+            </button>
+            <button class="item_Country_content" onclick="show('operation15')">
+                <img src="images/flag_argentina.svg" class="flag_lang" /> <b>Argentina</b><span>54</span>
+            </button>
+            
+            
+            <div id="operation1" class="operation"><img src="images/flag_saudiarabia.svg" class="flag_lang" /> <span>996</span></div>
+            <div id="operation2" class="operation"><img src="images/flag_bahrain.svg" class="flag_lang" /> <span>973</span></div>
+            <div id="operation3" class="operation"><img src="images/flag_united-arab-emirates.svg" class="flag_lang" /> <span>971</span></div>
+            <div id="operation4" class="operation"><img src="images/flag_kwait.svg" class="flag_lang" /> <span>965</span></div>
+            <div id="operation5" class="operation"><img src="images/flag_qatar.svg" class="flag_lang" /> <span>974</span></div>
+            <div id="operation6" class="operation"><img src="images/flag_oman.svg" class="flag_lang" /> <span>968</span></div>
+            <div id="operation7" class="operation"><img src="images/flag_afghanistan.svg" class="flag_lang" /> <span>971</span></div>
+            <div id="operation8" class="operation"><img src="images/flag_albania.svg" class="flag_lang" /> <span>971</span></div>
+            <div id="operation9" class="operation"><img src="images/flag_algeria.svg" class="flag_lang" /> <span>971</span></div>
+            <div id="operation10" class="operation"><img src="images/flag_american-samoa.svg" class="flag_lang" /> <span>971</span></div>
+            <div id="operation11" class="operation"><img src="images/flag_andorra.svg" class="flag_lang" /> <span>971</span></div>
+            <div id="operation12" class="operation"><img src="images/flag_angola.svg" class="flag_lang" /> <span>971</span></div>
+            <div id="operation13" class="operation"><img src="images/flag_anguilla.svg" class="flag_lang" /> <span>971</span></div>
+            <div id="operation14" class="operation"><img src="images/flag_antigua-and-barbuda.svg" class="flag_lang" /> <span>971</span></div>
+            <div id="operation15" class="operation"><img src="images/flag_argentina.svg" class="flag_lang" /> <span>971</span></div>
+        </div>
         
         
 <!--
@@ -105,7 +156,7 @@
 -->
     </div><!--/page-wrapper-->
     
-    
+    <div class="blackOverview"></div>
     
 <!-- Javascript -->
 <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>    
@@ -142,6 +193,20 @@
     function show(param_div_id) {
         document.getElementById('country_flag_num').innerHTML = document.getElementById(param_div_id).innerHTML;
     }
+    $('.country_flag_num').click(function() {
+        $('.Country_content').fadeIn();
+        $('.blackOverview').fadeIn();
+    });
+    $('.Country_content button').click(function() {
+        $('.blackOverview').fadeOut();
+        $('.Country_content').fadeOut();
+    });
+    $('.blackOverview').click(function() {
+        $(this).fadeOut();
+        $('.Country_content').fadeOut();
+    });
+    
+    
     
 </script>
 
