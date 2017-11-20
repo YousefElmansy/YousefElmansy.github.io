@@ -168,7 +168,7 @@ input.input_lang {
     width: 100%;
     height: 100%;
     background: #fff;
-    display: none;
+/*    display: none;*/
 }
 
 .header_page{
@@ -193,9 +193,10 @@ input.input_lang {
 .country_input{
     float: left;
     width: 30%;
+    position: relative;
     border-bottom: #ddd 1px solid;
     padding-bottom: 5px;
-    position: relative;
+    height: 66px;
 }
 .label_input{
     font-size: 1em;
@@ -213,6 +214,9 @@ input.input_lang {
     float: left;
     width: 65%;
     margin-left: 5%;
+    border-bottom: #ddd 1px solid;
+    padding-bottom: 5px;
+    height: 66px;
 }
 
 .Country_content{
@@ -266,3 +270,51 @@ input.input_lang {
 }
 
 
+
+
+.InputOfPhone{
+    width: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+}
+
+
+.NumPadPhone{
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.NumPadPhone a{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: #ddd;
+    text-align: center;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    float: left;
+    margin: 10px 28px;
+}
+.NumPadPhone span{
+    float: left;
+    margin: 10px 28px 0px 28px;
+    line-height: 50px;
+    color: #969696;
+}
+
+span.delete {
+    float: left;
+    text-align: center;
+    margin-left: 33px;
+}
+span.cancel {
+    float: right;
+    text-align: center;
+    margin-right: 35px;
+}
