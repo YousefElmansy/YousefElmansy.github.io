@@ -239,9 +239,9 @@ input.input_lang {
     float: left;
     width: 100%;
     border: none;
-/*    border-bottom: #f7f7f7 1px solid;*/
     text-align: left;
     padding: 5px 10px; 
+    background: #fff;
 }
 .item_Country_content b{
     font-weight: normal;
