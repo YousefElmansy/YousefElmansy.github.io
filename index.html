@@ -22,6 +22,7 @@
     <!-- Styles -->
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <style>@import url('https://fonts.googleapis.com/css?family=Cairo:300,400,600,700&subset=arabic');</style>
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link type="text/css" rel="stylesheet" href="css/style_en.css">
     
 </head>
@@ -50,7 +51,38 @@
             <div class="blackOverview"></div>
         </div><!--/splash-->
         
-        
+        <div class="Phone_Screen">
+            <div class="header_page">
+                <h3 class="title_header_page">Phone Number</h3>
+                <p class="subtitle_header_page">You need to login to Morni in order to use services</p>
+            </div>
+            <div class="content_Phone_Screen">
+                <div class="country_input">
+                    <p class="label_input">Country</p>
+                    <div class="country_flag_num">
+                        <b id="country_flag_num"><img src="images/flag_saudiarabia.svg" class="flag_lang" /> <span>0996</span></b>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="Country_content">
+                        <button onclick="show('operation1')"><img src="images/flag_saudiarabia.svg" class="flag_lang" /> <span>0996</span></button>
+                        <button onclick="show('operation2')"><img src="images/flag_us.svg" class="flag_lang" /> <span>973</span></button>
+                        <button onclick="show('operation3')"><img src="images/flag_pakistan.svg" class="flag_lang" /> <span>971</span></button>
+                        <div id="operation1" style="display: none;">
+                            <img src="images/flag_saudiarabia.svg" class="flag_lang" /> <span>0996</span>
+                        </div>
+                        <div id="operation2" style="display: none;">
+                            <img src="images/flag_us.svg" class="flag_lang" /> <span>973</span>
+                        </div>
+                        <div id="operation3" style="display: none;">
+                            <img src="images/flag_pakistan.svg" class="flag_lang" /> <span>971</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone_input">
+                    <p class="label_input">Phone Number</p>
+                </div>
+            </div>
+        </div>
         
         
         
@@ -106,6 +138,11 @@
     $('.approve').click(function() {
         $('.Language').hide();
     });
+    
+    function show(param_div_id) {
+        document.getElementById('country_flag_num').innerHTML = document.getElementById(param_div_id).innerHTML;
+    }
+    
 </script>
 
 </body>
