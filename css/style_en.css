@@ -282,7 +282,7 @@ input.input_lang {
 
 .NumPadPhone{
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     background: #fff;
     width: 320px;
     left: 50%;
