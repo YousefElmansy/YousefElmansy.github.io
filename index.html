@@ -183,6 +183,9 @@
         $('.InputOfPhone').val($('.InputOfPhone').val()+$(this).html());
         return false;
     });
+    $(".InputOfPhone").keydown(function(event) { 
+        return false;
+    });
     $('.delete').on('click',function () { 
         var textVal = $('.InputOfPhone').val();
         $('.InputOfPhone').val(textVal.substring(0,textVal.length - 1));
