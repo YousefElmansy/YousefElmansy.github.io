@@ -1,65 +1,56 @@
+
 @charset "UTF-8";
+/* ----------- Links and type ----------- */
+
 * {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: transparent;
-  zoom: 1; }
-
-a {
-  text-decoration: none;
-  color: inherit; }
-
-a:hover, a:focus {
-  text-decoration: none;
-  color: inherit; }
-
-a:focus {
-  outline: none; }
-
-input {
-  vertical-align: middle; }
-
-img {
-  border-width: 0px; }
-
-ul,
-li,
-p {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
     margin: 0;
     padding: 0;
-    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+    zoom: 1;
 }
-
+a{
+	text-decoration:none;
+	color:inherit;
+}
+a:hover, a:focus{
+	text-decoration:none; 
+	color:inherit;
+}
+a:focus {
+    outline: none;
+}
+input{vertical-align:middle;}
+img{border-width:0px;}
+ul,
+li,
+p{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
 html {
-    font-size: 1em;
-    min-height: 100%;
+	font-size: 1em;
+	min-height: 100%;
 }
-@-ms-viewport { width: device-width; }
 body {
-    font: 100% cairo, Helvetica, sans-serif;
-    color: #6D6E70;
-    margin: 0;
-    width: 100%;
-    font-size: initial;
-    line-height: normal;
-    direction: ltr;
+	margin: 0;
+	width: 100%;
+	font-size: initial;
+	line-height: normal;
+	font: 80%/150% "Cairo", Arial, Helvetica, sans-serif;
+	direction: ltr;
+    color: #838383;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -ms-overflow-style: scrollbar;
-    height: 100%;
-    background-color: #09B8A7;
-    background-repeat: repeat-x;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#09B8A7), to(#00A0BE));
-    background: -webkit-linear-gradient(top, #09B8A7, #00A0BE);
-    background: -moz-linear-gradient(top, #09B8A7, #00A0BE);
-    background: -ms-linear-gradient(top, #09B8A7, #00A0BE);
-    background: -o-linear-gradient(top, #09B8A7, #00A0BE);
+    background: #fff;
 }
+@-ms-viewport{width:device-width;}
 
 
-
+/* ----------- Fonts ----------- */
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
@@ -68,266 +59,117 @@ body {
   font-style: normal;
 }
 
+/* ----------- Main layout ----------- */
 
-.page-wrapper {
+
+
+.ArticleDetails{
     width: 100%;
-    margin: 0 auto;
-    height: 100%;
-    position: relative;
-}
-.logo {
-    width: 200px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-.logo img{
-    max-width: 200px;
-}
-
-
-
-.Language{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: #fff;
     padding: 10px;
-    display: none;
+    text-align: right;
+    direction: rtl;
 }
-.Language ul li{
+
+.PhotoOfArticle{
+    float: right;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.TitleOfArticle{
+    float: right;
+    width: 100%;
+    font-size: 1.3em;
+    color: #06ADB3;
+    padding: 0;
+    margin: 5px 0;
+    line-height: 1.7em;
+}
+.SourceOfArticle{
+    float: right;
+    width: 100%;
+    font-size: 1em;
+    color: #000;
+    margin: 5px 0px;
+}
+.DateOfArticle{
+    float: right;
+    width: 100%;
+    font-size: 1em;
+    color: #8D8D8D;
+    margin: 10px 0px;
+}
+.DescriptionOfArticle{
+    float: right;
+    width: 100%;
+    font-size: 1.1em;
+    color: #555758;
+    line-height: normal;
+    text-align: justify;
+}
+
+.DescriptionOfArticle ul {
+    float: right;
+    width: 100%;
+    padding-right: 20px;
+    margin: 20px 0;
+}
+.DescriptionOfArticle ul li{
+    float: right;
+    width: 100%;
+    list-style: disc;
+    margin-bottom: 10px;
+}
+.InPhotoOfArticle{
+    float: right;
     width: 100%;
     margin: 10px 0;
 }
-.Language ul li a{
-    display: block;
-}
-.Language ul li a b{
-    font-weight: normal;
-}
-.flag_lang{
-    width: 20px !important;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-.dialog{
-    width: 90%;
-    margin: 0 auto;
-    background: #fff;
-    position: fixed;
-    z-index: 100;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 6px;
-    text-align: center;
-    box-shadow: #000 0 0 5px;
-    padding-bottom: 20px;
-    display: none;
-}
-
-.title_dialog{
-    padding: 10px;
-    border-bottom: #eee 1px solid;
-    font-size: 1.3em;    
-}
-.dialog button{
-    margin: 2px;
-    border: none;
-}
-.blackOverview{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.80);
-    z-index: 99;
-    display: none;
-}
-
-input.input_lang {
-    border: none;
-    max-width: 60px;
-    display: inline-block;
-    margin-top: -5px;
-}
-.content_dialog{
-    margin-bottom: 20px;
-}
 
 
 
-.Phone_Screen{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-/*    display: none;*/
-}
-
-.header_page{
-    float: left;
-    width: 100%;
-    background-color: #09B8A7;
-    background-repeat: repeat-x;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#09B8A7), to(#00A0BE));
-    background: -webkit-linear-gradient(top, #09B8A7, #00A0BE);
-    background: -moz-linear-gradient(top, #09B8A7, #00A0BE);
-    background: -ms-linear-gradient(top, #09B8A7, #00A0BE);
-    background: -o-linear-gradient(top, #09B8A7, #00A0BE);
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-}
-.content_Phone_Screen{
-    float: left;
-    width: 100%;
-    padding: 10px;
-}
-.country_input{
-    float: left;
-    width: 30%;
-    position: relative;
-    border-bottom: #ddd 1px solid;
-    padding-bottom: 5px;
-    height: 66px;
-}
-.label_input{
-    font-size: 1em;
-}
-.country_input .flag_lang{
-    width: 25px !important;
-    margin-top: -3px;
-}
-.icon_arrow{
-    position: absolute;
-    right: 0;
-    transform: translateY(50%);
-}
-.phone_input{
-    float: left;
-    width: 65%;
-    margin-left: 5%;
-    border-bottom: #ddd 1px solid;
-    padding-bottom: 5px;
-    height: 66px;
-}
-
-.Country_content{
-    width: 90%;
-    margin: 0 auto;
-    background: #fff;
-    position: fixed;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    border-radius: 6px;
-    text-align: center;
-    box-shadow: #000 0 0 5px;
-    padding: 10px 0px;
-    display: none;
-    height: 500px;
-    overflow: scroll;
-}
-.operation{display: none;}
-
-
-
-.item_Country_content{
-    float: left;
-    width: 100%;
-    border: none;
-    text-align: left;
-    padding: 5px 10px; 
-    background: #fff;
-}
-.item_Country_content b{
-    font-weight: normal;
-}
-.item_Country_content span{
-    text-align: right;
-    float: right;
-}
-.item_Country_content .flag_lang{
-    width: 25px !important;
-    margin-top: -3px;
-}
-
-.Letter_type{
+.ControlOfFont{
     background: #f3f3f3;
-    text-align: left;
-    padding-left: 10px;
-}
-
-
-
-
-.InputOfPhone{
-    width: 100%;
-    background: #fff;
-    border: none;
-    outline: none;
-}
-
-
-.NumPadPhone{
-    position: absolute;
-    bottom: 40px;
-    background: #fff;
-    width: 320px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.NumPadPhone a{
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    background: #F8F8F8;
+    border: #ddd 1px solid;
+    position: fixed;
+    left: 10px;
+    top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    opacity: 0.5;
     color: #000;
-    text-align: center;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    border-radius: 100%;
-    float: left;
-    margin: 10px 20px;
-    font-size: 1.4em;
-    font-family: sans-serif;
-    font-weight: lighter;
+    direction: rtl;
+    z-index: 1;
 }
-.NumPadPhone a:hover{
-    background: #09B8A7;
-    color: #fff;
+.ControlOfFont i{
+    margin: 1px;
+    padding: 3px 5px;
+    font-size: 1em;
+    cursor: pointer;
 }
 
-.NumPadPhone span{
-    float: left;
-    margin: 10px 28px 0px 22px;
-    line-height: 50px;
-    color: #969696;
-    font-size: .9em;
-    font-family: sans-serif;
-    font-weight: lighter;
+.Dialogue{
+    display: none;
 }
-
-span.delete {
-    float: left;
-    text-align: center;
-    margin-left: 30px;
-}
-span.cancel {
-    float: left;
-    width: 60px;
+.messageOfDialogue{
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    width: 90%;
+    background: #fff;
+    padding: 20px 15px;
+    color: #444;
+    z-index: 111;
+    border-radius: 3px;
     text-align: center;
 }
-
+.BgOfDialogue{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 11;
+}
