@@ -45,7 +45,7 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -ms-overflow-style: scrollbar;
-    background: #fff;
+    background: #fff !important;
 }
 @-ms-viewport{width:device-width;}
 
@@ -68,6 +68,7 @@ body {
     padding: 10px;
     text-align: right;
     direction: rtl;
+    background: #fff !important;
 }
 
 .PhotoOfArticle{
@@ -173,3 +174,4 @@ body {
     background: rgba(0, 0, 0, 0.8);
     z-index: 11;
 }
+
